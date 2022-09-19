@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      nodejs:14
+      
+    pre-build:
+      
+      commands:
+        -npm install
+        
+    build:
+      commands:
+        -node --version
+        -npm run build
+        
+    artifacts:
+      - 'Dockerfile'
+      - 'build/**/*'
